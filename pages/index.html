@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aangifte erfbelasting</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+<form>
+    <fieldset id="1a">
+        <legend>1a. Volledige naam</legend>
+        <label>
+            Naam
+            <input type="text" pattern="/^[A-Za-z ]*$/"/>
+        </label>
+        <label>
+            Tussenvoegsel
+            <input type="text" />
+        </label>
+        <label>
+            Achternaam
+            <input type="text" />
+        </label>
+        <label>
+            BSN
+            <input type="number" />
+        </label>
+        <label>
+            Overlijdens datum
+            <input type="date" />
+        </label>
+    </fieldset>
+    <fieldset id="1b">
+        <legend>1b. Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment van
+            overlijden?
+        </legend>
+        <label>
+            Nee
+            <input type="radio" name="marriedPartner" value="noMarried" checked />
+        </label>
+        <label>
+            Ja
+            <input type="radio" name="marriedPartner" value="yesMarried" />
+        </label>
+        <section id="yesMarried">
+            <fieldset>
+                <legend>Hadden de overledene en diens echtgenoot of
+                    geregistreerd partner huwelijkse of partnerschapsvoorwaarden
+                    laten vastleggen in een notariële akte?
+                </legend>
+                <label>
+                    Nee
+                    <input type="radio" name="marriageConditions" />
+                </label>
+                <label>
+                    Ja
+                    <input type="radio" name="marriageConditions" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Hadden de overledene en diens partner een finaal
+                    verrekenbeding?
+                </legend>
+                <label>
+                    Nee
+                    <input type="radio" name="verrekenbeding" />
+                </label>
+                <label>
+                    Ja
+                    <input type="radio" name="verrekenbeding" />
+                </label>
+            </fieldset>
+            <label>
+                Datum huwelijkse of partnerschapsvoorwaarden
+                <input type="date" />
+            </label>
+        </section>
+    </fieldset>
+    <fieldset id="1c">
+        <legend>1c. Had de overledene kinderen?</legend>
+        <label>
+            Nee
+            <input type="radio" name="hasChildren" value="noChildren" checked />
+        </label>
+        <label>
+            Ja
+            <input type="radio" name="hasChildren" value="yesChildren" />
+        </label>
+        <section id="hasChildren">
+            <fieldset>
+                <legend>Is 1 van deze kinderen eerder overleden dan de
+                    overledene voor wie u nu aangifte doet?
+                </legend>
+                <label>
+                    Nee
+                    <input type="radio" name="childDied" />
+                </label>
+                <label>
+                    Ja
+                    <input type="radio" name="childDied" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Had dit overleden kind zelf kinderen?
+                </legend>
+                <label>
+                    Nee
+                    <input type="radio" name="childHadChildren" />
+                </label>
+                <label>
+                    Ja
+                    <input type="radio" name="childHadChildren" />
+                </label>
+            </fieldset>
+        </section>
+    </fieldset>
+    <fieldset id="1d">
+        <legend>Had de overledene een testament?</legend>
+        <label>
+            Nee
+            <input type="radio" name="hasWill" value="noWill" checked />
+        </label>
+        <label>
+            Ja
+            <input type="radio" name="hasWill" value="yesWill" />
+        </label>
+        <fieldset id="hasWill">
+            <legend>Vul de gegevens in van de notaris die het testament heeft opgemaakt en de
+                datum van het testament.
+            </legend>
+            <label>
+                Protocolnummer notaris
+                <input type="number" name="nmbrNotary" />
+            </label>
+            <label>
+                Voorletter(s)
+                <input type="text" name="initials" />
+            </label>
+            <label>
+                Tussenvoegsel(s)
+                <input type="text" name="prefix" />
+            </label>
+            <label>
+                Achternaam
+                <input type="text" name="lastName" />
+            </label>
+            <label>
+                Vestigingsplaats
+                <input type="text" name="hasWill" />
+            </label>
+        </fieldset>
+    </fieldset>
+    <input type="submit" />
+</form>
+
+<script defer src="../scripts/script.js"></script>
+</body>
+</html>
